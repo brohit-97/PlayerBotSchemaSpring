@@ -1,9 +1,6 @@
 package dev.rohit.playerbotschemaspring.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Inheritance;
-import jakarta.persistence.InheritanceType;
+import jakarta.persistence.*;
 
 import java.util.UUID;
 
@@ -11,6 +8,7 @@ import java.util.UUID;
 @Inheritance(strategy = InheritanceType.JOINED)
 public class Player {
     @Id
+    @Column(name = "player_id")
     private Long id;
 
     private String name;
